@@ -1,16 +1,18 @@
 /* Write a program to build a `Pyramid of stars` of given height */
 
-const buildPyramid = (rows) => {
-	//var rows = 6; 
+const pyramid = (rows) => {
+    //var rows = 6; 
+    let pyramidVal="";
     for (var i = 1; i <= rows; i++) {
         for (var k = 1; k <= (rows - i); k++) {
-            document.write("&nbsp;");
+            pyramidVal=+"  ";
         }
         for (var j = 1; j <= i; j++) {
-            document.write("* ");
+            pyramidVal=+"* ";
         }
-        document.write("<br/>");
+        pyramidVal=+" \n";
     }
+     return pyramidVal;
 };
 
 /* For example,
@@ -25,4 +27,4 @@ OUTPUT -
 
 */
 
-module.exports = buildPyramid;
+module.exports = pyramid;
