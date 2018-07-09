@@ -1,30 +1,27 @@
 /* Write a program to build a `Pyramid of stars` of given height */
-
-const pyramid = (rows) => {
-    //var rows = 6; 
-    let pyramidVal="";
-    for (var i = 1; i <= rows; i++) {
-        for (var k = 1; k <= (rows - i); k++) {
-            pyramidVal=+"  ";
-        }
-        for (var j = 1; j <= i; j++) {
-            pyramidVal=+"* ";
-        }
-        pyramidVal=+" \n";
-    }
-     return pyramidVal;
+const buildPyramid = (param) => {
+    var stars ="";
+    for(var i=0;i<param;i++) {
+         var output="";
+         for(var j=0;j<param-i;j++) {
+             output+=" ";            
+         }
+         for(var k=0;k<=i;k++) {            
+            output += "* ";
+         }
+          output += " \n";
+          stars +=output;         
+     }
+     return stars;
 };
-
 /* For example,
 INPUT - buildPyramid(6)
 OUTPUT -
-     *
-    * *
-   * * *
-  * * * *
- * * * * *
+    *
+   * *
+  * * *
+ * * * *
+* * * * *
 * * * * * *
-
 */
-
-module.exports = pyramid;
+module.exports = buildPyramid;
