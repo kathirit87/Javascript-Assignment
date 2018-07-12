@@ -6,22 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Javascript Assignment</title>
 </head>
+<script type="text/javascript" src="solutions/q4_data_modelling_and_retrieval.js"></script>
 <script>
-
-    const buildPyramid = (rows) => {
-	//var rows = 6; 
-    for (var i = 1; i <= rows; i++) {
-        for (var k = 1; k <= (rows - i); k++) {
-            document.write('&nbsp;');
-        }
-        for (var j = 1; j <= i; j++) {
-            document.write('* ');
-        }
-        document.write("<br/>");
-    }
-};
+    
 </script>
 <body>
-    <input type="button" value="Build Pyramid" onclick="buildPyramid(10)">
+    <div>
+        Enter Fruit Name :<input type="text" name="Input" id="fname">
+        <input type="submit" value="Submit" onclick="retriveFruits(fname.value)">
+        <div id="display"></div>
+    </div>
 </body>
 </html>

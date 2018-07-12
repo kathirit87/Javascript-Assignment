@@ -1,20 +1,20 @@
-/* Write a program to build a `Pyramid of stars` of given height */
+/*   Write a program to build a `Pyramid of stars` of given height */
 const buildPyramid = (param) => {
-    var stars ="";
-    for(var i=0;i<param;i++) {
-         var output="";
-         for(var j=0;j<param-i;j++) {
-             output+=" ";            
+    let stars = '';
+    for(let ikey = 0; ikey < param; ikey = ikey + 1) {
+         let output = '';
+         for(let jkey = 0; jkey < param - ikey; jkey = jkey + 1) {
+             output = output + ' ';
          }
-         for(var k=0;k<=i;k++) {            
-            output += "* ";
+         for(let kKey = 0; kKey <= ikey; kKey = kKey + 1) {
+            output = output + '* ';
          }
-          output += " \n";
-          stars +=output;         
+          output = output + ' \n';
+          stars = stars + output;
      }
      return stars;
 };
-/* For example,
+/*   For example,
 INPUT - buildPyramid(6)
 OUTPUT -
     *
