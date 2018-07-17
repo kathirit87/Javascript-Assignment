@@ -8,3 +8,48 @@
 
 
 // Write your code here
+
+let students = [
+    {
+        name: 'student1',
+        marks: {
+            grammer: 75,
+            accounts: 85
+        }
+    },
+    {
+        name: 'student2',
+        marks: {
+            grammer: 65,
+            accounts: 75
+        }
+    },
+    {
+        name: 'student3',
+        marks: {
+            grammer: 85,
+            physics: 95
+        }
+    },
+    {
+        name: 'student4',
+        marks: {
+            grammer: 91,
+            physics: 94
+        }
+    }
+];
+
+students.forEach(function (student) {
+    console.log(student);
+    if (student.marks !== null) {
+        let total = student.marks.grammer;
+        total += student.marks.accounts ? student.marks.accounts : 0;
+        total += student.marks.physics ? student.marks.physics : 0;
+        // Student has only 2 subjects so average calculated by 2.
+        let avg = total / 2;
+        // add percentage value to student object
+        student['percentage'] = avg;
+    }
+})
+console.log(students);
